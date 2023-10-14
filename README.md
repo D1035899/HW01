@@ -3,17 +3,31 @@
 學號: D1035899  姓名: 張牧翔
 
 所有的檔案包括此文件皆已上傳至gitgub
-連結: 
+連結:
 
 [https://github.com/D1035899/HW01](https://github.com/D1035899/HW01)
 
 ---
 
+## 目錄
+
+- [軟體測試 HW01](#軟體測試-hw01)
+  - [目錄](#目錄)
+  - [題目1: Triangle](#題目1-triangle)
+    - [設計說明](#設計說明)
+    - [節錄程式碼](#節錄程式碼)
+    - [執行結果](#執行結果)
+  - [題目2: Person](#題目2-person)
+    - [設計說明](#設計說明-1)
+    - [節錄程式碼](#節錄程式碼-1)
+    - [執行結果](#執行結果-1)
+  - [作業心得](#作業心得)
+
 ---
 
 ## 題目1: Triangle
 
-### 設計說明:
+### 設計說明
 
 - 依照題目要求，在`Triangle.java` 中製作了`checkTriangle()` method，並且會判斷三邊長任一邊是否`≤`0 or 符不符合構成三角形的條件，如果測資是錯的就會throw自製的`TriangleException` ，反之則回傳三角形的類型給`Main.java`
 - 在`Main.java` 裡輸入三邊長，並呼叫`checkTriangle()` ，接著取得回傳結果，輸出三角形的類型
@@ -113,11 +127,11 @@ public class TriangleException extends Exception {
   int aa;
   int bb;
   int cc;
-  
+
   // 將checkTriangle() 所得到的三個邊長以及錯誤類型封裝進TriangleException()
-  // 錯誤類型: 
-  // flag = true : a || b || c <= 0 
-  // flag = false : 任兩邊長 <= 第三邊 
+  // 錯誤類型:
+  // flag = true : a || b || c <= 0
+  // flag = false : 任兩邊長 <= 第三邊
   public TriangleException(boolean flag, int a, int b, int c) {
     this.flag = flag;
     this.aa = a;
@@ -182,7 +196,7 @@ public class TriangleException extends Exception {
     - 利用`assertAll()`一次執行所有測資
     - 測試順序為: 三邊長數值以及組成條件, 正三角, 等腰, 直角, 不規則
     - 測資為:
-    
+
     ```java
     (-1, 0, 0)    // 三邊長不得為0
     (6, -2, 5)    // 三邊長不得為0
@@ -193,22 +207,22 @@ public class TriangleException extends Exception {
     (5, 12, 13)   // 正確測資
     (10, 30, 21)  // 正確測資
     ```
-    
+
     - *回傳結果說明:*
         - *1 : 正三角形*
         - *2 : 等腰三角形*
         - *3 : 直角三角形*
         - *0 : 不規則三角形*
         - ***如果exception有跳出來則回傳結果不會準確，但會顯示自訂的錯誤原因***
-    
+
     ![Untitled]4(images/Untitled4.png)
-    
+
 
 ---
 
 ## 題目2: Person
 
-### 設計說明:
+### 設計說明
 
 - 依照題目要求，在`Person.java` 中製作了`Person class` ，當中有兩個Person物件，一個是預設的空物件，另一個則是題目所需的Person物件，可以初始化姓名和生日年
 - 建立年齡的`getter & setter`並透過生日年來取得年齡，且也有兩種method，來應付不同狀況
@@ -490,7 +504,7 @@ public String personErr() {
 @org.junit.jupiter.api.Test
   // 姓名測試: 姓名不能含有數字或特殊字元
   public void nameTest() {
-    assertAll("nameTest", 
+    assertAll("nameTest",
 				() -> assertEquals(true, Check.checkInput("Sam")),
         () -> assertEquals(false, Check.checkInput("A1ex")),
         () -> assertEquals(false, Check.checkInput("T0m")),
@@ -514,16 +528,16 @@ public String personErr() {
 - Junit執行結果
     - 利用`assertAll()`一次執行所有測
     - 測資為:
-    
+
     ```java
     "Sam"   // 正確測資
     "A1ex"    // 錯誤測資
     "T0m"     // 錯誤測資
     "Jammie"  // 正確測資
     ```
-    
+
     ![Untitled9](images/Untitled9.png)
-    
+
 
 ---
 
