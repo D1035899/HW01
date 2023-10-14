@@ -21,9 +21,9 @@
 
 ### 節錄程式碼
 
-![Untitled](images\Untitled.png)
+![Untitled](images/Untitled.png)
 
-![Untitled](images\Untitled1.png)
+![Untitled1](images/Untitled1.png)
 
 - Main.java
 
@@ -170,13 +170,13 @@ public class TriangleException extends Exception {
     - 測資: `(3, 4, 5)`
     - 正常輸出: 直角三角形
 
-![Untitled](images\Untitled2.png)
+![Untitled2](images/Untitled2.png)
 
 - 錯誤輸入執行結果(三邊長不得小於0)
     - 測資: `(2, -1, 7)`
     - 錯誤輸出: throw 出`TriangleException()`的例外處理
 
-![Untitled](images\Untitled3.png)
+![Untitled3](images/Untitled3.png)
 
 - Junit執行結果
     - 利用`assertAll()`一次執行所有測資
@@ -201,7 +201,7 @@ public class TriangleException extends Exception {
         - *0 : 不規則三角形*
         - ***如果exception有跳出來則回傳結果不會準確，但會顯示自訂的錯誤原因***
     
-    ![Untitled](images\Untitled4.png)
+    ![Untitled]4(images/Untitled4.png)
     
 
 ---
@@ -220,9 +220,9 @@ public class TriangleException extends Exception {
 
 ### 節錄程式碼
 
-![Untitled](images\Untitled5.png)
+![Untitled5](images/Untitled5.png)
 
-![Untitled](images\Untitled6.png)
+![Untitled6](images/Untitled6.png)
 
 - Main.java
 
@@ -503,13 +503,13 @@ public String personErr() {
 
 - 正常輸入執行結果
 
-![Untitled](images\Untitled7.png)
+![Untitled7](images/Untitled7.png)
 
 - 錯誤輸入執行結果(以輸入錯誤姓名為例)
     - 測資: 以輸入錯誤姓名為例
     - 錯誤輸出: throw 出`PersonException()`的例外處理
 
-![Untitled](images\Untitled8.png)
+![Untitled8](images/Untitled8.png)
 
 - Junit執行結果
     - 利用`assertAll()`一次執行所有測
@@ -522,7 +522,7 @@ public String personErr() {
     "Jammie"  // 正確測資
     ```
     
-    ![Untitled](images\Untitled9.png)
+    ![Untitled9](images/Untitled9.png)
     
 
 ---
