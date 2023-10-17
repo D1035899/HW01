@@ -215,7 +215,7 @@ public class TriangleException extends Exception {
         - *0 : 不規則三角形*
         - ***如果exception有跳出來則回傳結果不會準確，但會顯示自訂的錯誤原因***
 
-    ![Untitled]4(images/Untitled4.png)
+    ![Untitled4](images/Untitled4.png)
 
 
 ---
